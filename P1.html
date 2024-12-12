@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.72.0">
+    <title>Product example · Bootstrap</title>
+
+    <link rel="canonical" href="https://v5.getbootstrap.com/docs/5.0/examples/product/">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+
+
+
+    <style>
+          body {
+            position: relative; /* To position the pseudo-element */
+            color: #f5f5f5;  /* Light text color */
+        }
+
+        /* Pseudo-element for the background image */
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('image/coffee-beans.jpg') no-repeat center center fixed; /* Set the coffee bean image as background */
+            background-size: cover; /* Cover the entire background */
+            opacity: 0.3; /* Adjust opacity for light transparency */
+            z-index: -1; /* Send it to the back */
+        }
+
+        .bd-placeholder-img {
+            font-size: 1.125rem;
+            text-anchor: middle;
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        @media (min-width: 768px) {
+            .bd-placeholder-img-lg {
+                font-size: 3.5rem;
+            }
+        }
+    </style>
+
+
+    <!-- Custom styles for this template -->
+    
+    <style>
+
+        .dark-mode {
+            background-color: #333;
+            color: #de8338;
+        }
+        
+        .dark-mode .site-header {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+        
+        
+        
+
+            
+    .image {
+    text-align: center;
+    margin-inline-start: 5px;
+    padding-right: 5000px;
+    width: 60%;
+    max-width: 70px;
+    height: 250px;
+    color: rgba(91, 26, 5, 0.7); /* Chocolate color */
+}
+
+
+       .site-header {
+       background-color: rgba(62, 39, 35, 0.9); /* Slightly transparent chocolate color */
+       backdrop-filter: saturate(180%) blur(20px);
+}
+
+
+.site-header a {
+    color: #ffcc80; /* A light cream color */
+}
+
+.site-header a:hover {
+    color: #fff3e0; /* Lighter cream color */
+    text-decoration: none;
+}
+/* Styles for the headline */
+  .headline {
+    font-size: 50px; /* Large font size */
+    font-weight: bold; /* Bold text */
+    color: #333; /* Dark color */
+    text-align: center; /* Centered text */
+    text-transform: uppercase; /* Uppercase letters */
+    letter-spacing: 4px; /* Spacing between letters */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for depth */
+    padding: 0;
+    margin: 0;
+    
+}
+
+    .lead {
+    font-size: 10px; /* Slightly larger lead text */
+    text-align: center; /* Centered text */
+}
+
+           
+        
+
+    .login-form {
+    
+    width: 500%; /* Full width */
+    max-width: 700px; /* Limit the width of the form */
+   
+    margin-top: 10px;
+    margin-left: auto; /* Center vertically and horizontally */
+    margin-right: auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark background with some transparency */
+    color: white; /* White text color */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+.login-form .form-label {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.login-form input {
+    font-size: 18px; /* Larger input text */
+    padding: 12px;
+}
+
+.login-form button {
+    font-size: 18px; /* Larger button text */
+    padding: 12px;
+    background-color: #ffcc80; /* Button background color */
+    color: #333; /* Button text color */
+    border: none;
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer;
+}
+
+.login-form button:hover {
+    background-color: #fff3e0; /* Button hover effect */
+}
+
+.chocolate-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease-in-out;
+        }
+
+        
+     .chocolate-card:hover {
+    transform: scale(1.1) rotate(2deg);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+        .chocolate-card img {
+            width: 100%;
+            height: auto;
+            object-fit: cover; /* Ensures image fills the card */
+        }
+
+        .card-title {
+            color: #4b2e2e; /* Chocolate brown color */
+            font-weight: bold;
+        }
+
+        .card-text {
+            color: #6f4e37; /* Lighter chocolate shade */
+        }
+
+        .container {
+            margin-top: 10px;
+        }
+        .Customer{
+            color: #040303;
+            width: 30px;
+        }
+        
+
+
+        /*
+ * Extra utilities
+ */
+
+        .flex-equal>* {
+            flex: 1;
+        }
+
+        @media (min-width: 768px) {
+            .flex-md-equal>* {
+                flex: 1;
+            }
+        }
+        
+        
+        
+    </style>
+    
+
+<body>
+   
+    <button class="btn btn-sm btn-light theme-toggle">Dark Mode</button>
+
+    <script src="P1.js"></script>
+    <nav class="site-header sticky-top py-1">
+        <div class="container d-flex flex-column flex-md-row justify-content-between">
+            <a class="py-2" href="#" aria-label="Product">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mx-auto" role="img"
+                    viewBox="0 0 24 24">
+                    <title>Product</title>
+                    <circle cx="12" cy="12" r="10" />
+                    <path
+                        d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
+                </svg>
+            </a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Tour</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Product</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Features</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Enterprise</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Support</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Pricing</a>
+            <a class="py-2 d-none d-md-inline-block" href="#">Cart</a>
+        </div>
+    </nav>
+
+    <div class="background-color">
+        <div class="col-md-5 p-lg-5 mx-auto my-5">
+            <h1 class="headline">Welcome To The ChocolateLand with no sugar</h1>
+        </div>
+        
+        <br>
+        <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+    </div>
+    <div id="gift-box-container">
+        <div class="gift-box">
+            <div class="lid"></div>
+            <div class="ribbon"></div>
+        </div>
+    </div>
+    
+    
+ 
+    <div class="login-form">
+        <form>
+            <div class="mb-3">
+                <label for="email" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="mb-3">
+                <label for="password" class="form-label">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Enter your password" required>
+            </div>
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+    
+
+    
+        
+    </div>
+    <div class="container">
+        <h1 class="text-center my-4" style="color: #4b2e2e;">Explore Our Chocolaty Delights</h1>
+        <div class="row">
+            <!-- Chocolate Card 1 -->
+            <div class="col-md-4 mb-4">
+                <div class="card chocolate-card">
+                    <img src="image\darkchocolate.jpg" alt="Chocolate 1">
+                    <div class="card-body">
+                        <h5 class="card-title">Dark Chocolate</h5>
+                        <p class="card-text">Feeling down? Dark chocolate rescues you faster than a lifeguard at a beach. Just unwrap and save yourself from Monday blues.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chocolate Card 2 -->
+            <div class="col-md-4 mb-4">
+                <div class="card chocolate-card">
+                    <img src="image/milk chocolate.jpg" alt="Chocolate 2">
+                    <div class="card-body">
+                        <h5 class="card-title">Milk Chocolate Heaven</h5>
+                        <p class="card-text">Creamy, smooth, and oh-so-delicious.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Chocolate Card 3 -->
+            <div class="col-md-4 mb-4">
+                <div class="card chocolate-card">
+                    <img src="image/white chocolate.jpg" alt="Chocolate 3">
+                    <div class="card-body">
+                        <h5 class="card-title">White Chocolate</h5>
+                        <p class="card-text">A delightful treat for your sweet tooth.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="special-offer text-center p-4 mt-5" style="background-color: #663e1b; border-radius: 15px;">
+                <h2 class="text-uppercase">Limited Time Offer!</h2>
+                <p>Get 30% off on all dark chocolates. Offer valid till feb 15.</p>
+                <a href="#" class="btn btn-warning btn-lg">Shop Now</a>
+            </div>
+           <hr>
+           <hr>
+            <div class="Customers" style="color: #040303;">
+                <h2 class="text-center text-uppercase">What Our Customers Say</h2>
+                <div class="d-flex justify-content-around flex-wrap">
+                    <blockquote class="blockquote">
+                        <p>"The best chocolates I've ever had. The dark chocolate is divine!"</p>
+                        <footer class="blockquote-footer">Astha, Chocolate Lover</footer>
+                    </blockquote>
+                    <blockquote class="blockquote">
+                        <p>"Creamy, smooth, and melts in your mouth. Highly recommend!"</p>
+                        <footer class="blockquote-footer">Krish Jain, Food Blogger</footer>
+                    </blockquote>
+                </div>
+            </div>
+            <h1 class="text-center" style="color: #040303;">
+                <i class="fas fa-cookie-bite"></i> Buy or not,but water your plants today.
+            </h1>
+                         
+            
+        </div>
+    </div>
+
+    <!-- Bootstrap JS (Optional for advanced features) -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"></script>
+
+    <footer class="container py-5">
+        <div class="row">
+            <div class="col-12 col-md">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="d-block mb-2" role="img"
+                    viewBox="0 0 24 24">
+                    <title>Product</title>
+                    <circle cx="12" cy="12" r="10" />
+                    <path
+                        d="M14.31 8l5.74 9.94M9.69 8h11.48M7.38 12l5.74-9.94M9.69 16L3.95 6.06M14.31 16H2.83m13.79-4l-5.74 9.94" />
+                </svg>
+                <small class="d-block mb-3 text-muted">&copy; 2017-2020</small>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Features</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="link-secondary" href="#">Cool stuff</a></li>
+                    <li><a class="link-secondary" href="#">Random feature</a></li>
+                    <li><a class="link-secondary" href="#">Team feature</a></li>
+                    <li><a class="link-secondary" href="#">Stuff for developers</a></li>
+                    <li><a class="link-secondary" href="#">Another one</a></li>
+                    <li><a class="link-secondary" href="#">Last time</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="link-secondary" href="#">Resource name</a></li>
+                    <li><a class="link-secondary" href="#">Resource</a></li>
+                    <li><a class="link-secondary" href="#">Another resource</a></li>
+                    <li><a class="link-secondary" href="#">Final resource</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>Resources</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="link-secondary" href="#">Business</a></li>
+                    <li><a class="link-secondary" href="#">Education</a></li>
+                    <li><a class="link-secondary" href="#">Government</a></li>
+                    <li><a class="link-secondary" href="#">Gaming</a></li>
+                </ul>
+            </div>
+            <div class="col-6 col-md">
+                <h5>About</h5>
+                <ul class="list-unstyled text-small">
+                    <li><a class="link-secondary" href="#">Team</a></li>
+                    <li><a class="link-secondary" href="#">Locations</a></li>
+                    <li><a class="link-secondary" href="#">Privacy</a></li>
+                    <li><a class="link-secondary" href="#">Terms</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>
