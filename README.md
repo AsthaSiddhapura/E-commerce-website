@@ -1,1 +1,1 @@
-gnhgjg
+Welcome to ChocolateLand is a fun and beginner-friendly static webpage built using HTML and CSS. This project showcases a chocolate-themed design with interactive features like hover effects and a toggleable dark mode. It was created as a practice project to improve web design and development skills.And it is created specially for Diabetic patient.
